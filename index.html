@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Draw</title>
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
@@ -13,7 +13,22 @@
             <button id="red">Red</button>
             <button id="green">Green</button>
             <button id="blue">Blue</button>
+            <div class="color-container">
+                <p>Pen Color:</p>
+                <div class="color" id="colorbox"></div>
+            </div>
             <div class="eccontainer">
+                <div class="slidecontainer">
+                    <p id="pensize">Pen Size: 15</p>
+                    <input
+                        type="range"
+                        min="1"
+                        max="100"
+                        value="15"
+                        class="slider"
+                        id="sliderid"
+                    />
+                </div>
                 <button id="erase">Erase</button>
                 <button id="clear">Clear</button>
             </div>
