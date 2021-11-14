@@ -1,8 +1,8 @@
 window.addEventListener("load", () => {
     const canvas = document.querySelector("#canvas");
     const ctx = canvas.getContext("2d");
-    canvas.height = window.innerHeight - 100;
-    canvas.width = window.innerWidth - 100;
+    canvas.height = window.innerHeight - 110;
+    canvas.width = window.innerWidth - 10;
 
     //Variabler
 
@@ -53,8 +53,7 @@ window.addEventListener("load", () => {
         linesize = 20;
     });
     document.getElementById("clear").addEventListener("click", function () {
-        color = "black";
-        linesize = 10;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
     });
     $(window).bind("mousewheel", function (event) {
         if (event.originalEvent.wheelDelta >= 0) {
@@ -66,6 +65,6 @@ window.addEventListener("load", () => {
 });
 window.addEventListener("resize", resize);
 function resize() {
-    canvas.height = window.innerHeight;
-    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight - 110;
+    canvas.width = window.innerWidth - 10;
 }
